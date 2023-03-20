@@ -142,7 +142,7 @@ exports.getDistances = catchAsync(async (req, res, next) => {
     );
   }
 
-  let distances = await Tour.aggregate([
+  const distances = await Tour.aggregate([
     {
       $geoNear: {
         near: {
