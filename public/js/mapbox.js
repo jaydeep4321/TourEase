@@ -1,6 +1,6 @@
 // console.log('Hello from client side');
 export const displayMap = (locations) => {
-  console.log('hello from inside function');
+  // console.log('hello from inside function');
   mapboxgl.accessToken =
     'pk.eyJ1IjoiamF5ZGVlcDQzMjEiLCJhIjoiY2xmaTNydWFqMjRndjN4cGdjbHNndDg4YiJ9.YdSg4s7VP0tBWUDVuXYPRA';
   var map = new mapboxgl.Map({

@@ -75,6 +75,11 @@ userSchema.pre(/^find/, function (next) {
   next();
 });
 
+// userSchema.post(/^find/, function (req, res, next) {
+//   if (req.params.id === '5c8a1d5b0190b214360dc057') res.user.name === 'jaivik';
+//   next();
+// });
+
 userSchema.methods.correctPassword = async function (
   candidatePassword,
   userPassword

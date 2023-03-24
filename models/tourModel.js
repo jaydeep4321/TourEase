@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const slugify = require('slugify');
+const math = require('math');
 
 const tourSchema = new mongoose.Schema(
   {
@@ -113,7 +114,27 @@ const tourSchema = new mongoose.Schema(
   },
   {
     toJSON: { virtuals: true },
+
+    // for changing id:
+
+    // toJSON: {
+    //   virtuals: true,
+    //   transform: function (doc, obj) {
+    //     obj.id = obj._id;
+    //     delete obj._id;
+    //   },
+    // },
+
     toObject: { virtuals: true },
+    //for changing id :
+
+    // toObject: {
+    //   virtuals: true,
+    //   transform: function (doc, obj) {
+    //     obj.id = obj._id;
+    //     delete obj._id;
+    //   },
+    // },
   }
 );
 

@@ -6678,7 +6678,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.displayMap = void 0;
 // console.log('Hello from client side');
 var displayMap = function displayMap(locations) {
-  console.log('hello from inside function');
+  // console.log('hello from inside function');
   mapboxgl.accessToken = 'pk.eyJ1IjoiamF5ZGVlcDQzMjEiLCJhIjoiY2xmaTNydWFqMjRndjN4cGdjbHNndDg4YiJ9.YdSg4s7VP0tBWUDVuXYPRA';
   var map = new mapboxgl.Map({
     container: 'map',
@@ -12395,7 +12395,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32783" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43487" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

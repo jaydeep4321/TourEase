@@ -49,15 +49,17 @@ exports.createOne = (model) =>
 
 exports.getOne = (model, popOption) =>
   catchAsync(async (req, res, next) => {
-    let query = model.findById(req.params.id);
+    let query = model.findById(req.params.id).lean();
     if (popOption) query = query.populate(popOption);
     const doc = await query;
+    // let doc = await query;
+
     // Tour.findOne({ _id: req.params.id })
 
     if (!doc) {
       return next(new AppError('No document found with this ID', 404));
     }
-
+    // doc.name = 'test';
     res.status(200).json({
       status: 'success',
       data: {
