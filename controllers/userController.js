@@ -106,6 +106,21 @@ exports.createUser = (req, res) => {
   });
 };
 
+exports.ignoreParams = catchAsync(async (req, res, next) => {
+  if (req.param.id) {
+    return req.param.id;
+  } else if (!req.param.id) {
+    req.param.id = '5c8a1dfa2f8fb814b56fa181';
+  }
+
+  const user = User.findById(req.param.id);
+
+  res.status(200).json({
+    status: 'success',
+    user,
+  });
+});
+
 //this is not for updating password
 exports.getAllUsers = factory.getAll(User);
 exports.getUser = factory.getOne(User);

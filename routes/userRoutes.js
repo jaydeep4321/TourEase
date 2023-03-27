@@ -40,6 +40,7 @@ router
 router
   .route('/:id')
   .get(userController.getUser)
+  // .get(userController.ignoreParams)
   .patch(userController.updateUser)
   .delete(userController.deleteUser);
 
