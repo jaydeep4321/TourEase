@@ -2,5 +2,5 @@
 .cache/
 node_modules/
 *.env
-# phpstorm project files 
+# phpstorm project files  
 .vscode
