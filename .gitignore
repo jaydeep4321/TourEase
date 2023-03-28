@@ -3,16 +3,5 @@
 /node_modules
 *.env
 # phpstorm project files
-.idea
-/backup
-access.log
 package-lock.json
-/uploads
-combined.log
-insider
-report.html
-report.json
-style.css
-ecosystem.config.js
-.config
 .vscode
