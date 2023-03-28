@@ -1,8 +1,6 @@
 # Add any directories, files, or patterns you don't want to be tracked by version control
-.cache/
-node_modules/
-/.config
-/configs/masterConfig.json
+/.cache
+/node_modules
 *.env
 # phpstorm project files
 .idea
@@ -17,7 +15,4 @@ report.json
 style.css
 ecosystem.config.js
 .config
-deploy_config.sh
-keys.encrypted.json
-envkey.decrypted
 .vscode
