@@ -33,6 +33,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(cors());
 
+app.options('*', cors());
+
+//serving the static file
 app.use(express.static(path.join(__dirname, 'public')));
 
 //set security for HTTP header
