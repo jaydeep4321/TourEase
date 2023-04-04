@@ -7,13 +7,12 @@ const Review = require('./../../models/reviewModel');
 
 dotenv.config({ path: './config.env' });
 
-const DB = process.env.DATABASE.replace(
+const DB = process.env.DATABASE_LOCAL.replace(
   '<PASSWORD>',
   process.env.DATABASE_PASSWORD
 );
 
 // const DB = process.env.DATABASE_LOCAL
-
 
 mongoose
   // .connect(process.env.DATABASE_LOCAL, {
@@ -21,6 +20,7 @@ mongoose
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
+    useUnifiedTopology: true,
   })
   .then(() => console.log('DB connection successful!'));
 

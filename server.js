@@ -10,12 +10,13 @@ process.on('uncaughtException', (err) => {
 dotenv.config({ path: './config.env' });
 const app = require('./app');
 
-const DB = process.env.DATABASE.replace(
+const DB = process.env.DATABASE_LOCAL.replace(
   '<PASSWORD>',
   process.env.DATABASE_PASSWORD
 );
 
-// const DB = process.env.DATABASE_LOCAL
+// const DB = `mongodb://jd1:${process.env.DATABASE_PASSWORD}@localhost:27017/${process.env.DBNAME}?authMechanism=DEFAULT`;
+// const DB = 'mongodb://jd1:root@localhost/natours&authSource=admin';
 
 mongoose
   // .connect(process.env.DATABASE_LOCAL, {
@@ -34,7 +35,8 @@ const server = app.listen(port, () => {
 
 process.on('unhandledRejection', (err) => {
   console.log('UNHANDLED ERROR!!!');
-  console.log(err.name, err.message);
+  // console.log(err.name, err.message);
+  console.log(err);
   server.close(() => {
     process.exit(1);
   });
